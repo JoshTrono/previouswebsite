@@ -9,6 +9,7 @@ import Hobbies from './components/Hobbies';
 
 function App() {
   return (
+
     <BrowserRouter>
       <Nav />
       <Routes>
@@ -16,7 +17,10 @@ function App() {
         <Route path="/5year" element={<Plan />} />
         <Route path="/hobbies" element={<Hobbies />} />
         </Routes>
+        <script type="module" src="./styles/js/main.js"></script>
     </BrowserRouter>
+
+
   );
 }
 
