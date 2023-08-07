@@ -46,63 +46,66 @@ const experience = [
 ];
 
 
+
 export default function Homepage() {
     return (
         <>
-        <div className='text-center'>
-        <img src={picture} className="img-fluid" alt="Responsive image" />
-        </div>
-        <div className="row">
-        <div className='col-lg-6 col-md-6 col-sm-12'>
-            <table className="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">Degree</th>
-                        <th scope="col">Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {rows.map((row) => (
-                        <tr key={row.degree}>
-                            <td>{row.degree}</td>
-                            <td>{row.date}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-            <table className="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">Experience</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {experience.map((experience) => (
-                        <tr key={experience.company}>
-                            <td>{experience.company}</td>
-                            <td>{experience.description}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
-        <div className='col-lg-6 col-md-6 col-sm-12'>
-            <table className="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">Skills</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {skills.map((skills) => (
-                        <tr key={skills.skill}>
-                            <td>{skills.skill}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
-        </div>
+
+            <div className="flex">
+
+                <div className='flex-1'>
+                <div className='text-center'>
+                <img src={picture} className="w-full" alt="Responsive image" />
+            </div>
+                    <table className="table-auto">
+                        <thead>
+                            <tr>
+                                <th className="px-4 py-2">Degree</th>
+                                <th className="px-4 py-2">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {rows.map((row) => (
+                                <tr key={row.degree}>
+                                    <td className="border px-4 py-2">{row.degree}</td>
+                                    <td className="border px-4 py-2">{row.date}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                    <table className="table-auto">
+                        <thead>
+                            <tr>
+                                <th className="px-4 py-2">Experience</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {experience.map((experience) => (
+                                <tr key={experience.company}>
+                                    <td className="border px-4 py-2">{experience.company}</td>
+                                    <td className="border px-4 py-2">{experience.description}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+                <div className='flex-1'>
+                    <table className="table-auto">
+                        <thead>
+                            <tr>
+                                <th className="px-4 py-2">Skills</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {skills.map((skills) => (
+                                <tr key={skills.skill}>
+                                    <td className="border px-4 py-2">{skills.skill}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </>
     )
 }

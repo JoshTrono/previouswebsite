@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import Homepage from './components/Homepage';
 import Plan from './components/Plan';
 import Hobbies from './components/Hobbies';
+import './index.css';
 
 function App() {
   return (

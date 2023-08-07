@@ -18,21 +18,21 @@ export default function Plan() {
     return (
         <>
         <div className='text-center'>
-        <h1>5 Year Plan</h1>
-        <table className="table table-striped">
+        <h1 className="text-3xl font-bold mb-4">5 Year Plan</h1>
+        <table className="table-auto w-full">
 
             <thead>
 
                 <tr>
-                    <th scope="col">Year</th>
-                    <th scope="col">Description</th>
+                    <th className="px-4 py-2">Year</th>
+                    <th className="px-4 py-2">Description</th>
                 </tr>
             </thead>
             <tbody>
                 {plan.map((plan) => (
                     <tr key={plan.year}>
-                        <td>{plan.year}</td>
-                        <td>{plan.description}</td>
+                        <td className="border px-4 py-2">{plan.year}</td>
+                        <td className="border px-4 py-2">{plan.description}</td>
                     </tr>
                 ))}
             </tbody>
