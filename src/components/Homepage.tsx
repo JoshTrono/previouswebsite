@@ -39,6 +39,7 @@ function createExperience(
     return { company, description };
 }
 const experience = [
+    createExperience('Revature Full-Stack Developer', 'I got trained with ruby, java, html, css, SQL, React and Angular. I worked on small projects with each of these technologies.'),
     createExperience('Beacon Software Solutions', "Assisted with answering phone call and emails with law enforcement. Worked on SQL to help fix our jail software to work with each individuals client's database."),
     createExperience('J-Tay Consulting Software Development', "* Provided project support in software development including program to transfer electronic health records data to standardized forms for physician’s office * Utilized C#"),
     createExperience('Citrus County School Board Help Desk Intern', '* Assisted Information Technology department to update software on teachers computers and repaired student Ipads'),
@@ -50,10 +51,9 @@ const experience = [
 export default function Homepage() {
     return (
         <>
-
-                <div className='flex'>
-                <img src={picture} className="lg:w-1/2 sm:w-full" alt="Responsive image" />
-                <table className="table-auto lg:w-1/2 sm:w-full">
+                <div className='flex flex-wrap'>
+                    <img src={picture} className="lg:w-1/2 md:w-1/2 w-full items-center" alt="" />
+                    <table className="table-auto lg:w-1/2 md:w-1/2 w-full">
                         <thead>
                             <tr>
                                 <th className="px-4 py-2">Degree</th>
@@ -69,9 +69,10 @@ export default function Homepage() {
                             ))}
                         </tbody>
                     </table>
-            </div>
-                <div className="flex">
-                    <table className="table-auto lg:w-1/2 sm:w-full">
+                </div>
+                <div className="flex flex-wrap">
+                    <table className="table-auto lg:w-1/2 md:w-1/2 w-full bg-blue-200 md:bg-white lg:bg-white">
+
                         <thead>
                             <tr>
                                 <th className="px-4 py-2">Experience</th>
@@ -86,7 +87,7 @@ export default function Homepage() {
                             ))}
                         </tbody>
                     </table>
-                    <table className="table-auto lg:w-1/2 sm:w-full">
+                    <table className="table-auto lg:w-1/2 mg:w-1/2 w-full">
                         <thead>
                             <tr>
                                 <th className="px-4 py-2">Skills</th>
