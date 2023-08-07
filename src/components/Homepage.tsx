@@ -71,7 +71,7 @@ export default function Homepage() {
                     </table>
                 </div>
                 <div className="flex flex-wrap">
-                    <table className="table-auto lg:w-1/2 md:w-1/2 w-full bg-blue-200 md:bg-white lg:bg-white">
+                    <table className="lg:w-1/2 md:w-1/2 w-full bg-blue-200 md:bg-white lg:bg-white">
 
                         <thead>
                             <tr>
@@ -87,7 +87,7 @@ export default function Homepage() {
                             ))}
                         </tbody>
                     </table>
-                    <table className="table-auto lg:w-1/2 mg:w-1/2 w-full">
+                    <table className="table-auto lg:w-1/2 mg:w-1/2 sm:w-1/2 xs:w-full">
                         <thead>
                             <tr>
                                 <th className="px-4 py-2">Skills</th>
