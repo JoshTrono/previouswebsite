@@ -51,13 +51,9 @@ export default function Homepage() {
     return (
         <>
 
-            <div className="flex">
-
-                <div className='flex-1'>
-                <div className='text-center'>
-                <img src={picture} className="w-full" alt="Responsive image" />
-            </div>
-                    <table className="table-auto">
+                <div className='flex'>
+                <img src={picture} className="lg:w-1/2 sm:w-full" alt="Responsive image" />
+                <table className="table-auto lg:w-1/2 sm:w-full">
                         <thead>
                             <tr>
                                 <th className="px-4 py-2">Degree</th>
@@ -73,7 +69,9 @@ export default function Homepage() {
                             ))}
                         </tbody>
                     </table>
-                    <table className="table-auto">
+            </div>
+                <div className="flex">
+                    <table className="table-auto lg:w-1/2 sm:w-full">
                         <thead>
                             <tr>
                                 <th className="px-4 py-2">Experience</th>
@@ -88,9 +86,7 @@ export default function Homepage() {
                             ))}
                         </tbody>
                     </table>
-                </div>
-                <div className='flex-1'>
-                    <table className="table-auto">
+                    <table className="table-auto lg:w-1/2 sm:w-full">
                         <thead>
                             <tr>
                                 <th className="px-4 py-2">Skills</th>
@@ -105,7 +101,6 @@ export default function Homepage() {
                         </tbody>
                     </table>
                 </div>
-            </div>
         </>
     )
 }

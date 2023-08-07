@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Nav() {
   return (
     <>
-<nav className="bg-white shadow-lg">
+<nav className="bg-white shadow-lg ">
   <div className="flex items-center justify-between px-4 py-2">
     <div className="flex-shrink-0">
       <Link to="/">Joshua</Link>
