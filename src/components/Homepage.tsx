@@ -51,62 +51,72 @@ export default function Homepage() {
     return (
         <>
             <div className='columns'>
-                <div className='column is-4'>
-                    <img src={picture} alt="" />
+                <div className='column is-6 is-half-desktop'>
+                    <div className="is-3by1">
+                        <img id='picture' src={picture} alt="" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+                    </div>
                 </div>
-                <div className='column is-8'>
-                    <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-                        <thead>
-                            <tr>
-                                <th>Degree</th>
-                                <th>Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {rows.map((row) => (
-                                <tr key={row.degree}>
-                                    <td>{row.degree}</td>
-                                    <td>{row.date}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div className="columns">
-                <div className="column is-half">
-                    <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-                        <thead>
-                            <tr>
-                                <th>Experience</th>
-                                <th>Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {experience.map((experience) => (
-                                <tr key={experience.company}>
-                                    <td>{experience.company}</td>
-                                    <td>{experience.description}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-                <div className="column is-half">
-                    <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-                        <thead>
-                            <tr>
-                                <th>Skills</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {skills.map((skills) => (
-                                <tr key={skills.skill}>
-                                    <td>{skills.skill}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                <div className='column is-6 is-half-desktop'>
+                    <div style={{ height: '800px', overflow: 'scroll' }}>
+                        <div className="columns">
+                            <div className="column">
+                                <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                                    <thead>
+                                        <tr>
+                                            <th>Degree</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {rows.map((row) => (
+                                            <tr key={row.degree}>
+                                                <td>{row.degree}</td>
+                                                <td>{row.date}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div className="columns">
+                            <div className="column">
+                                <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                                    <thead>
+                                        <tr>
+                                            <th>Experience</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {experience.map((experience) => (
+                                            <tr key={experience.company}>
+                                                <td>{experience.company}</td>
+                                                <td>{experience.description}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div className="columns">
+                            <div className="column">
+                                <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                                    <thead>
+                                        <tr>
+                                            <th>Skills</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {skills.map((skills) => (
+                                            <tr key={skills.skill}>
+                                                <td>{skills.skill}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
