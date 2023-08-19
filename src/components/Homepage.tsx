@@ -51,13 +51,13 @@ export default function Homepage() {
     return (
         <>
             <div className='columns'>
-                <div className='column is-6 is-half-desktop'>
+                <div className='column is-4'>
                     <div className="is-3by1">
                         <img id='picture' src={picture} alt="" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
                     </div>
                 </div>
-                <div className='column is-6 is-half-desktop'>
-                    <div style={{ height: '800px', overflow: 'scroll' }}>
+                <div className='column is-8'>
+                    <div style={{ height: '100%', overflow: 'scroll' }}>
                         <div className="columns">
                             <div className="column">
                                 <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
