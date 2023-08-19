@@ -36,7 +36,7 @@ export default function Nav() {
             </li>
             <li className="navbar-item">
               <Link to="/5year" className="navbar-item">
-              5 Year Plan
+                5 Year Plan
               </Link>
             </li>
             <li className="navbar-end">

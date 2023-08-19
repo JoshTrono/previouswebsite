@@ -1,5 +1,6 @@
 import picture from '../images/Picture1.jpg';
 
+
 function createData(
     degree: string,
     date: string,
@@ -46,62 +47,68 @@ const experience = [
     createExperience('College Of Central Florida', '* Assist IT students with classwork including Microsoft Office suite, A+ Fundamentals, and Web Programming'),
 ];
 
-
-
 export default function Homepage() {
     return (
         <>
-                <div className='flex flex-wrap'>
-                    <img src={picture} className="lg:w-1/2 md:w-1/2 w-full items-center" alt="" />
-                    <table className="table-auto lg:w-1/2 md:w-1/2 w-full">
+            <div className='columns'>
+                <div className='column is-4'>
+                    <img src={picture} alt="" />
+                </div>
+                <div className='column is-8'>
+                    <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                         <thead>
                             <tr>
-                                <th className="px-4 py-2">Degree</th>
-                                <th className="px-4 py-2">Date</th>
+                                <th>Degree</th>
+                                <th>Date</th>
                             </tr>
                         </thead>
                         <tbody>
                             {rows.map((row) => (
                                 <tr key={row.degree}>
-                                    <td className="border px-4 py-2">{row.degree}</td>
-                                    <td className="border px-4 py-2">{row.date}</td>
+                                    <td>{row.degree}</td>
+                                    <td>{row.date}</td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 </div>
-                <div className="flex flex-wrap">
-                    <table className="lg:w-1/2 md:w-1/2 w-full bg-blue-200 md:bg-white lg:bg-white">
-
+            </div>
+            <div className="columns">
+                <div className="column is-half">
+                    <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                         <thead>
                             <tr>
-                                <th className="px-4 py-2">Experience</th>
+                                <th>Experience</th>
+                                <th>Description</th>
                             </tr>
                         </thead>
                         <tbody>
                             {experience.map((experience) => (
                                 <tr key={experience.company}>
-                                    <td className="border px-4 py-2">{experience.company}</td>
-                                    <td className="border px-4 py-2">{experience.description}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                    <table className="table-auto lg:w-1/2 mg:w-1/2 sm:w-1/2 xs:w-full">
-                        <thead>
-                            <tr>
-                                <th className="px-4 py-2">Skills</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {skills.map((skills) => (
-                                <tr key={skills.skill}>
-                                    <td className="border px-4 py-2">{skills.skill}</td>
+                                    <td>{experience.company}</td>
+                                    <td>{experience.description}</td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 </div>
+                <div className="column is-half">
+                    <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                        <thead>
+                            <tr>
+                                <th>Skills</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {skills.map((skills) => (
+                                <tr key={skills.skill}>
+                                    <td>{skills.skill}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </>
     )
 }
