@@ -1,28 +1,52 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Nav() {
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <>
-<nav className="bg-white shadow-lg ">
-  <div className="flex items-center justify-between px-4 py-2">
-    <div className="flex-shrink-0">
-      <Link to="/">Joshua</Link>
-    </div>
-    <ul className="flex space-x-4">
-      <li className="nav-item">
-        <Link to="/" className="hover:text-blue-500">Home</Link>
-      </li>
-      <li className="nav-item">
-        <Link to="/5year" className="hover:text-blue-500">5 Year Plan</Link>
-      </li>
-      <li className="nav-item">
-        <Link to="/hobbies" className="hover:text-blue-500">Hobbies</Link>
-      </li>
-    </ul>
-  </div>
-</nav>
-
+      <nav className="navbar" role="navigation" aria-label="main navigation">
+        <div className="navbar">
+          <div className="navbar-brand">
+            <Link to="/" className="navbar-item">
+              Joshua
+            </Link>
+            <a
+              role="button"
+              className={`navbar-burger ${isActive ? "is-active" : ""}`}
+              aria-label="menu"
+              aria-expanded="false"
+              onClick={toggleNavbar}
+            >
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <ul className={`navbar-menu ${isActive ? "is-active" : ""}`}>
+            <li className="navbar-start">
+              <Link to="/" className="navbar-item">
+                Home
+              </Link>
+            </li>
+            <li className="navbar-item">
+              <Link to="/5year" className="navbar-item">
+              5 Year Plan
+              </Link>
+            </li>
+            <li className="navbar-end">
+              <Link to="/hobbies" className="navbar-item">
+                Hobbies
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </>
-  )
+  );
 }
-
