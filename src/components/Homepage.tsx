@@ -50,72 +50,71 @@ const experience = [
 export default function Homepage() {
     return (
         <>
-            <div className='columns'>
+            <div className='columns' style={{ padding: '0 1rem' }}>
                 <div className='column is-4'>
-                    <div className="is-3by1">
-                        <img id='picture' src={picture} alt="" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
-                    </div>
+
+                    <img id='picture' src={picture} alt="" style={{ objectFit: 'contain', width: '100%', height: 'auto' }} />
+
                 </div>
                 <div className='column is-8'>
-                    <div style={{ height: '100%', overflow: 'scroll' }}>
-                        <div className="columns">
-                            <div className="column">
-                                <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-                                    <thead>
-                                        <tr>
-                                            <th>Degree</th>
-                                            <th>Date</th>
+                    <div className="is-fullheight" style={{ overflow: 'scroll' }}>
+                        <div className="column">
+                            <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                                <thead>
+                                    <tr>
+                                        <th>Degree</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {rows.map((row) => (
+                                        <tr key={row.degree}>
+                                            <td>{row.degree}</td>
+                                            <td>{row.date}</td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        {rows.map((row) => (
-                                            <tr key={row.degree}>
-                                                <td>{row.degree}</td>
-                                                <td>{row.date}</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                                    ))}
+                                </tbody>
+                            </table>
                         </div>
-                        <div className="columns">
-                            <div className="column">
-                                <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-                                    <thead>
-                                        <tr>
-                                            <th>Experience</th>
-                                            <th>Description</th>
+
+
+                        <div className="column">
+                            <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                                <thead>
+                                    <tr>
+                                        <th>Experience</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {experience.map((experience) => (
+                                        <tr key={experience.company}>
+                                            <td>{experience.company}</td>
+                                            <td>{experience.description}</td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        {experience.map((experience) => (
-                                            <tr key={experience.company}>
-                                                <td>{experience.company}</td>
-                                                <td>{experience.description}</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                                    ))}
+                                </tbody>
+                            </table>
                         </div>
-                        <div className="columns">
-                            <div className="column">
-                                <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-                                    <thead>
-                                        <tr>
-                                            <th>Skills</th>
+
+
+                        <div className="column">
+                            <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                                <thead>
+                                    <tr>
+                                        <th>Skills</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {skills.map((skills) => (
+                                        <tr key={skills.skill}>
+                                            <td>{skills.skill}</td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        {skills.map((skills) => (
-                                            <tr key={skills.skill}>
-                                                <td>{skills.skill}</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                                    ))}
+                                </tbody>
+                            </table>
                         </div>
+
                     </div>
                 </div>
             </div>
