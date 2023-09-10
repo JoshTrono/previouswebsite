@@ -16,7 +16,7 @@ const plan = [
 
 export default function Plan() {
     return (
-        <section className="section">
+        <section className="section has-background-dark" style={{ top: 0, left:0 , width: "100%", height: "100%" }}>
             <div className="container">
                 <h1 className="title is-3 has-text-centered mb-4">5 Year Plan</h1>
                 <table className="table is-fullwidth">

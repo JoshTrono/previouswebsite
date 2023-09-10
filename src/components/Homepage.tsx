@@ -1,5 +1,5 @@
 import picture from '../images/Picture1.jpg';
-
+import './Homepage.css';
 
 function createData(
     degree: string,
@@ -50,16 +50,21 @@ const experience = [
 export default function Homepage() {
     return (
         <>
-            <div className='columns' style={{ padding: '0 1rem' }}>
+            <div className='columns has-background-dark' style={{ padding: '0 1rem'}}>
                 <div className='column is-4'>
 
                     <img id='picture' src={picture} alt="" style={{ objectFit: 'contain', width: '100%', height: 'auto' }} />
-
+                    <div>
+                        <ul style={{backgroundColor: 'lightgray', display: "flex", justifyContent: "space-between"}}>
+                            <li><p style={{ fontSize:'80%'}}>Email: Josh.Trono@gmail.com</p></li>
+                            <li><a href="https://www.linkedin.com/in/joshua-trono-0a0a55150/">Linkedin</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div className='column is-8'>
                     <div className="is-fullheight" style={{ overflow: 'scroll' }}>
                         <div className="column">
-                            <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                            <table className="table is-bordered is-narrow is-hoverable is-fullwidth">
                                 <thead>
                                     <tr>
                                         <th>Degree</th>
@@ -79,7 +84,7 @@ export default function Homepage() {
 
 
                         <div className="column">
-                            <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                            <table className="table is-bordered is-narrow is-hoverable is-fullwidth">
                                 <thead>
                                     <tr>
                                         <th>Experience</th>
@@ -99,7 +104,7 @@ export default function Homepage() {
 
 
                         <div className="column">
-                            <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                            <table className="table is-bordered is-narrow is-hoverable is-fullwidth">
                                 <thead>
                                     <tr>
                                         <th>Skills</th>

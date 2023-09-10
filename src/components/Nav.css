@@ -1,0 +1,9 @@
+.navbar {
+    background-color: lightgray;
+}
+.Nav-icon {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-size-adjust: 4em;
+}

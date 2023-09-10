@@ -3,7 +3,7 @@ import React from 'react';
 export default function Hobbies() {
     return (
         <>
-            <div className="has-text-centered">
+            <div className="has-text-centered has-background-light">
                 <h1 className="title is-4 has-text-weight-bold mb-4">My Hobbies</h1>
                 <p className="mb-4">
                     I have some hobbies which include Videogames and learning about technology.
