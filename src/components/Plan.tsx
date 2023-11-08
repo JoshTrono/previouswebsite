@@ -16,29 +16,26 @@ const plan = [
 
 export default function Plan() {
     return (
-        <>
-        <div className='text-center'>
-        <h1 className="text-3xl font-bold mb-4">5 Year Plan</h1>
-        <table className="table-auto w-full">
-
-            <thead>
-
-                <tr>
-                    <th className="px-4 py-2">Year</th>
-                    <th className="px-4 py-2">Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                {plan.map((plan) => (
-                    <tr key={plan.year}>
-                        <td className="border px-4 py-2">{plan.year}</td>
-                        <td className="border px-4 py-2">{plan.description}</td>
-                    </tr>
-                ))}
-            </tbody>
-        </table>
-
-        </div>
-        </>
-    )
+        <section className="section has-background-dark" style={{ top: 0, left:0 , width: "100%", height: "100%" }}>
+            <div className="container">
+                <h1 className="title is-3 has-text-centered mb-4">5 Year Plan</h1>
+                <table className="table is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {plan.map((plan) => (
+                            <tr key={plan.year}>
+                                <td>{plan.year}</td>
+                                <td>{plan.description}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    );
 }

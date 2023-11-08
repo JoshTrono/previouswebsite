@@ -15,7 +15,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <App/>
   </React.StrictMode>
 
 );
